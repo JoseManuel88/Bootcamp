@@ -1,0 +1,60 @@
+.welcome {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.items ul {
+  color: red;
+}
+.user__password {
+  margin-right: 60px;
+}
+.img__ {
+  margin-left: 68px;
+  margin-top: 35px;
+}
+.parrafo {
+  justify-content: center;
+}
+
+.horizontal {
+  display: flex;
+  margin-right: 300px
+}
+.chimp{
+  margin-right: 164px;
+  margin-left: 50px;
+}
+.list__two{
+  margin-right: 10px;
+}
+.form{
+  display: inline-grid;
+
+} 
+.login{
+  color: blue;
+}
+.character__password{
+  display: flex;
+}
+.sign__up{
+  display: flex;
+  margin-bottom: 1px;
+}
+.boton{
+  width: 120px;
+  height: 56px;
+}
+.checkbox{
+  display: flex;
+}
+.input{
+  margin-left: 12px;
+  margin-bottom: 21px;
+  margin-right: 12px;
+}
+.button__one{
+  margin-top: 13px;
+}
+
