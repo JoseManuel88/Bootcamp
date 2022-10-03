@@ -2,7 +2,7 @@
 const myFavoriteHero = 'Hulk';
 
 // 1.2 Crea una variable llamada x, asigna el valor 50 a ella.
-const x = 50;
+let x = 50;
 
 // 1.3 Crea una variable llamada 'h' con el valor 5 y otra 'y' con el valor 10. 
 const h = 5;
@@ -61,7 +61,38 @@ const resto = 15 & 9;
 console.log(resto);
 // 1.4 Usa el correcto operador de asignación que resultará en x = 15, 
 // teniendo dos variables y = 10 y z = 5.
-const x = y + z ;
+x = y + z ;
 // 1.5 Usa el correcto operador de asignación que resultará en x = 50,
 // teniendo dos variables y = 10 y z = 5.
-const x = y * z ;
+ x = y * z ;
+
+
+// 1.1 Consigue el valor "HULK" del array de cars y muestralo por consola.
+let avengers = ["HULK", "SPIDERMAN", "BLACK PANTHER"];
+let avenger = avengers [0];
+console.log(avenger);
+
+// 1.2 Cambia el primer elemento de avengers a "IRONMAN"
+ avengers = ["HULK", "SPIDERMAN", "BLACK PANTHER"];
+avengers.push("IRONMAN");
+console.log(avengers);
+avengers.reverse();
+console.log(avengers);
+avenger = avengers [0];
+console.log(avenger);
+
+// 1.3 Alert numero de elementos en el array usando la propiedad correcta de Array.
+ avengers = ["HULK", "SPIDERMAN", "BLACK PANTHER"];
+console.log(avengers.length);
+// 1.4 Añade 2 elementos al array: "Morty" y "Summer". 
+// Muestra en consola el último personaje del array
+let rickAndMortyCharacters = ["Rick", "Beth", "Jerry"];
+rickAndMortyCharacters.push("Morty","Summer");
+console.log(rickAndMortyCharacters);
+rickAndMortyCharacter = rickAndMortyCharacters [4];
+console.log(rickAndMortyCharacter);
+// 1.5 Elimina el último elemento del array y muestra el primero y el último por consola.
+ rickAndMortyCharacters = ["Rick", "Beth", "Jerry", "Morty", "Summer", "Lapiz Lopez"];
+
+// 1.6 Elimina el segundo elemento del array y muestra el array por consola.
+ rickAndMortyCharacters = ["Rick", "Beth", "Jerry", "Morty", "Summer", "Lapiz Lopez"];
