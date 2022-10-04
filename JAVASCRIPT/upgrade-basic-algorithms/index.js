@@ -82,15 +82,17 @@ console.log(vengers);
 console.log(avengers.length);
 // 1.4 Añade 2 elementos al array: "Morty" y "Summer". 
 // Muestra en consola el último personaje del array
+// 1.5 Elimina el último elemento del array y muestra el primero y el último por consola.
+// 1.6 Elimina el segundo elemento del array y muestra el array por consola.
 let rickAndMortyCharacters = ["Rick", "Beth", "Jerry"];
 rickAndMortyCharacters.push("Morty","Summer");
 console.log(rickAndMortyCharacters);
 rickAndMortyCharacter = rickAndMortyCharacters [4];
 console.log(rickAndMortyCharacter);
-// 1.5 Elimina el último elemento del array y muestra el primero y el último por consola.
+
  rickAndMortyCharacters = ["Rick", "Beth", "Jerry", "Morty", "Summer", "Lapiz Lopez"];
 
-// 1.6 Elimina el segundo elemento del array y muestra el array por consola.
+
  rickAndMortyCharacters = ["Rick", "Beth", "Jerry", "Morty", "Summer", "Lapiz Lopez"];
 
 
