@@ -73,12 +73,9 @@ console.log(avenger);
 
 // 1.2 Cambia el primer elemento de avengers a "IRONMAN"
  avengers = ["HULK", "SPIDERMAN", "BLACK PANTHER"];
-avengers.push("IRONMAN");
-console.log(avengers);
-avengers.reverse();
-console.log(avengers);
-avenger = avengers [0];
-console.log(avenger);
+ avengers [0] = "IRONMAN";
+console.log(vengers);
+
 
 // 1.3 Alert numero de elementos en el array usando la propiedad correcta de Array.
  avengers = ["HULK", "SPIDERMAN", "BLACK PANTHER"];
