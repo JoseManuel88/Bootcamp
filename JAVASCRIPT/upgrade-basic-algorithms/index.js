@@ -74,7 +74,7 @@ console.log(avenger);
 // 1.2 Cambia el primer elemento de avengers a "IRONMAN"
  avengers = ["HULK", "SPIDERMAN", "BLACK PANTHER"];
  avengers [0] = "IRONMAN";
-console.log(vengers);
+console.log(avengers);
 
 
 // 1.3 Alert numero de elementos en el array usando la propiedad correcta de Array.
@@ -153,10 +153,11 @@ for (let i = 0; i <= 9; i++) {
 
 
 for (let i = 0; i <= 9; i++) {
-if(i == 9){
+    if(i == 9){
     console.log("Dormido!")
-}else{
+    }else{
+
     console.log("Intentando dormir")
 
-}
-}
+    }
+  }
