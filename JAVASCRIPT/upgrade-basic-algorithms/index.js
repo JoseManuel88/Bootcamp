@@ -33,8 +33,7 @@ console.log(juegoTronos)
 
 const toy1 = {name: 'Buss myYear', price: 19};
 const toy2 = {name: 'Rallo mcKing', price: 29};
-const priceToys = toy1.price + toy2.price;
-console.log(priceToys)
+console.log(toy1.price + toy2.price)
 
 
 // 1.4 Dado el siguiente javascript, actualiza el valor de la variable globalBasePrice a 25000 
