@@ -17,3 +17,9 @@ const counterWords = [
   function repeatCounter(param) {
     // insert code
   }
+  // function montarEnBici() {
+  //   console.log("Ride or die");
+  //   console.log("nos vemos en vallnord");
+  // console.log("a Full");
+  // };
+  // montarEnBici();
