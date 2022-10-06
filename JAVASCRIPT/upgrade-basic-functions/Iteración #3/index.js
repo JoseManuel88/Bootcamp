@@ -4,7 +4,13 @@
 // Puedes usar este array para probar tu función:
 
 const numbers = [1, 2, 3, 5, 45, 37, 58];
-
-function sumAll(param) {
-  // insert code
+ 
+function sumAll(array) {
+  let suma = 0;
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+    suma += array[i];
+  }
+  return suma
 }
+console.log(sumAll (numbers));
