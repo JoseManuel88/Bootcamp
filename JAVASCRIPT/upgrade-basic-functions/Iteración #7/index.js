@@ -1,20 +1,27 @@
 // Crea una función que reciba por parámetro un array y el valor que desea comprobar que existe
-//  dentro de dicho array - comprueba si existe el elemento, en caso que existan nos devuelve la posición de dicho 
+//  dentro de dicho array - comprueba si existe el elemento, en caso que existan nos devuelve la posición de dicho
 // elemento y por la contra un false. Puedes usar este array para probar tu función:
 
 const nameFinder = [
-    'Peter',
-    'Steve',
-    'Tony',
-    'Natasha',
-    'Clint',
-    'Logan',
-    'Xabier',
-    'Bruce',
-    'Peggy',
-    'Jessica',
-    'Marc'
-  ];
-  function finderName(param) {
-    // insert code
+  "Peter",
+  "Steve",
+  "Tony",
+  "Natasha",
+  "Clint",
+  "Logan",
+  "Xabier",
+  "Bruce",
+  "Peggy",
+  "Jessica",
+  "Marc",
+];
+function finderName(array, name) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] == name) {
+      return i;
+    }
   }
+  return false;
+}
+
+console.log(finderName(nameFinder, "Logan"));
