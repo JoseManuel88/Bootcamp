@@ -21,7 +21,7 @@ function contadorRepetido(array) {
     const resultado = array.filter((x) => x === array[i]);
     console.log("Palabra: " + resultado[0] + ", Contador: " + resultado.length);
   }
-}
+} ==>
 
 // function contadorRepetidoDistinto(array) {
 //   const array2 = [];
