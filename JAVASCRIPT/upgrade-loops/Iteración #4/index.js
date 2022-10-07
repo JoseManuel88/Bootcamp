@@ -6,4 +6,7 @@ const alien = {
     race: 'Cucusumusu',
     planet: 'Eden',
     weight: '259kg'
+
+
 }
+
