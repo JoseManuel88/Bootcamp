@@ -2,8 +2,18 @@
 
 // Puedes usar este array:
 
-const placesToTravel = ['Japon', 'Venecia', 'Murcia', 'Santander', 'Filipinas', 'Madagascar']
+const placesToTravel = [
+  "Japon",
+  "Venecia",
+  "Murcia",
+  "Santander",
+  "Filipinas",
+  "Madagascar",
+];
 for (let i = 0; i < placesToTravel.length; i++) {
-   console.log(placesToTravel);
-    
+
+  
 }
+
+
+console.log(placesToTravel);
