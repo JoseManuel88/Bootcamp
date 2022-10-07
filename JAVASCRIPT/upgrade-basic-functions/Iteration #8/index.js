@@ -15,7 +15,7 @@ const counterWords = [
   "code",
 ];
 
-// dfsfsejdsañ
+
 function contadorRepetido(array) {
   for (let i = 0; i < array.length; i++) {
     const resultado = array.filter((x) => x === array[i]);
