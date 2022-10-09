@@ -9,3 +9,9 @@ const toys = [
 	{id: 40, name: 'El gato con Guantes', sellCount: 8},
 	{id: 40, name: 'El gato felix', sellCount: 35}
 ]
+
+for (let i > 15([i](sellCount) < toys.length i++) {
+    if (toys[i].includes(sellCount > 15)) {
+        camisetas.push(toys[i])
+    }
+console.log(toys);

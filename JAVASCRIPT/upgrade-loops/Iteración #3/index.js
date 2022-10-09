@@ -2,18 +2,21 @@
 
 // Puedes usar este array:
 
-const placesToTravel = [
-  "Japon",
-  "Venecia",
-  "Murcia",
-  "Santander",
-  "Filipinas",
-  "Madagascar",
-];
-for (let i = 0; i < placesToTravel.length; i++) {
-
+// const placesToTravel = [
+//   "Japon",
+//   "Venecia",
+//   "Murcia",
+//   "Santander",
+//   "Filipinas",
+//   "Madagascar",
+// ];
+// for (let i = 0; i < placesToTravel.length; i++) {
+// let array = []
+//   for (const element of array.split) {
   
-}
+// }
+  
+// }
 
 
-console.log(placesToTravel);
+// console.log(placesToTravel);
