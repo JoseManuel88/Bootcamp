@@ -10,8 +10,14 @@ const toys = [
 	{id: 40, name: 'El gato felix', sellCount: 35}
 ]
 
-for (let i > 15([i](sellCount) < toys.length i++) {
-    if (toys[i].includes(sellCount > 15)) {
-        camisetas.push(toys[i])
-    }
-console.log(toys);
+for (const object of toys) {
+	if (object['sellCount'] > 15) {
+		popularToys.push(object);
+	}
+}
+
+
+
+
+
+console.log(popularToys);
