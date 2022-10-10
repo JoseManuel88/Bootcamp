@@ -4,4 +4,19 @@
 
 // Sugerencia de array:
 
-['Mesirve', 'Cristiano Romualdo', 'Fernando Muralla', 'Ronalguiño']
+let jugadores = ['Mesirve', 'Cristiano Romualdo', 'Fernando Muralla', 'Ronalguiño']
+
+
+
+function swap(array, firstIndex, secondIndex){
+    const firstElement = array[firstIndex];
+    array[firstIndex] = array[secondIndex];
+    array[secondIndex] = firstElement;
+
+    return array;
+}
+
+let newArray = swap(['Mesirve', 'Cristiano Romualdo', 'Fernando Muralla', 'Ronalguiño'], 0, 3)
+console.log(newArray);
+ newArray = swap(['Mesirve', 'Cristiano Romualdo', 'Fernando Muralla', 'Ronalguiño'], 2, 1)
+ newArray = swap(['Mesirve', 'Cristiano Romualdo', 'Fernando Muralla', 'Ronalguiño'], 0, 2)
