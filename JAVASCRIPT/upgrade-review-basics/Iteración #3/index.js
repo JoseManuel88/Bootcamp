@@ -42,15 +42,13 @@ const users = [
 
 const array = [];
 for (let i in users) {
-
   let clave = Object.keys(users[i].favoritesSounds);
   for (let obj = 0; obj < clave.length; obj++) {
-    
-    const filtro = array.filter(x => x.song === clave[obj]);
+    const filtro = array.filter((x) => x.song === clave[obj]);
     if (filtro.length === 0) {
       array.push({
         song: clave[obj],
-        conteo: 1
+        conteo: 1,
       });
     } else {
       for (let index = 0; index < array.length; index++) {
