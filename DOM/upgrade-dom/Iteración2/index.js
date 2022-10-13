@@ -3,18 +3,18 @@ window.onload = function() {
   let div = document.createElement("div");
   document.body.appendChild(div);
   // 2.2 Inserta dinamicamente en un html un div que contenga una p con javascript.
-  let p = document.createElement("p");
-  div.appendChild(p);
+  let parraf = document.createElement("p");
+  div.appendChild(parraf);
 
   // 2.3 Inserta dinamicamente en un html un div que contenga 6 p utilizando un loop con javascript.
   for (let i = 0; i < 6; i++) {
-    let p2 = document.createElement("p");
-    div.appendChild(p2);
+    let parraf2 = document.createElement("p");
+    div.appendChild(parraf2);
   }
   // 2.4 Inserta dinamicamente con javascript en un html una p con el texto 'Soy dinámico!'.
-  let p3 = document.createElement("p");
+  let parraf3 = document.createElement("p");
   p3.textContent = "Soy dinamico!";
-  document.body.appendChild(p3);
+  document.body.appendChild(parraf3);
 
   // 2.5 Inserta en el h2 con la clase .fn-insert-here el texto 'Wubba Lubba dub dub'.
 let h2 = document.querySelector(".fn-insert-here");
@@ -29,25 +29,25 @@ for (let i = 0; i < apps.length; i++) {
 }
 document.body.appendChild(pelis);
   // 2.7 Elimina todos los nodos que tengan la clase .fn-remove-me
-  let rem = document.querySelectorAll(".fn-remove-me"); 
+  let borrar = document.querySelectorAll(".fn-remove-me"); 
   for (let i = 0; i < rem.length; i++) {
-    rem[i].remove();
+    borrar[i].remove();
   }
   // 2.8 Inserta una p con el texto 'Voy en medio!' entre los dos div.
   // 	Recuerda que no solo puedes insertar elementos con .appendChild.
-let p4 = document.createElement("p");
-p4.textContent = 'Voy en medio!';
+let parraf4 = document.createElement("p");
+parraf4.textContent = 'Voy en medio!';
 // document.body.appendChild(p4);
 div = document.querySelectorAll('.fn-insert-here');
-div[div.length-2].append(p4);
+div[div.length-2].append(parraf4);
   // 2.9 Inserta p con el texto 'Voy dentro!', dentro de todos los div con la clase .fn-insert-here
 
-let p6 = document.querySelectorAll('.fn-insert-here');
+let parraf6 = document.querySelectorAll('.fn-insert-here');
 
-for (let i = 0; i < p6.length; i++) {
-  let p5 = document.createElement("p");
-  p5.textContent = 'Voy dentro!';
-  p6[i].appendChild(p5);
+for (let i = 0; i < parraf6.length; i++) {
+  let parraf5 = document.createElement("p");
+  parraf5.textContent = 'Voy dentro!';
+  parraf6[i].appendChild(parraf5);
 }
 
 }
