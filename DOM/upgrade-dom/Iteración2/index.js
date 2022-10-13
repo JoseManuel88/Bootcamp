@@ -30,7 +30,7 @@ for (let i = 0; i < apps.length; i++) {
 document.body.appendChild(pelis);
   // 2.7 Elimina todos los nodos que tengan la clase .fn-remove-me
   let borrar = document.querySelectorAll(".fn-remove-me"); 
-  for (let i = 0; i < rem.length; i++) {
+  for (let i = 0; i < borrar.length; i++) {
     borrar[i].remove();
   }
   // 2.8 Inserta una p con el texto 'Voy en medio!' entre los dos div.
