@@ -16,7 +16,7 @@ console.log(document.querySelectorAll('[data-function = "testMe"]'));
 
 // 1.6 Usa querySelector para mostrar por consola el 3 personaje con el atributo 
 // data-function="testMe".
-cnst characters$$ = document.querySelectorAll('[data-function = "testMe"]');
+let characters$$ = document.querySelectorAll('[data-function = "testMe"]');
 console.log(characters$$[2]);
 
 
