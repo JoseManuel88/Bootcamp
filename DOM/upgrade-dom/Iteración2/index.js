@@ -13,7 +13,7 @@ window.onload = function() {
   }
   // 2.4 Inserta dinamicamente con javascript en un html una p con el texto 'Soy dinámico!'.
   let parraf3 = document.createElement("p");
-  p3.textContent = "Soy dinamico!";
+  parraf3.textContent = "Soy dinamico!";
   document.body.appendChild(parraf3);
 
   // 2.5 Inserta en el h2 con la clase .fn-insert-here el texto 'Wubba Lubba dub dub'.
