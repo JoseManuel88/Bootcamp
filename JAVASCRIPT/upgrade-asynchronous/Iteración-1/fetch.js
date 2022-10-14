@@ -11,19 +11,20 @@ fetch('https://api.agify.io?name=michael')
 // fetch() para hacer una consulta a la api cuando se haga click en el botón, 
 // pasando como parametro de la api, el valor del input.
 
-
-const baseUrl = 'https://api.nationalize.io/?name=';
 const button$$ = document.querySelector("button");
 const input$$ = document.querySelector("input");
 
+const realizarPeticion = () => {
+    const nombre = input$$.value;
 
-const fetchData = () =>{
-    fetch(baseUrl + input$$.value)
-    .then((data) => data.json())
-    .then((data) => console.log(data))
+    fetch("https://api.nationalize.io/?name=" + nombre).then((response) => response.json())
+    .then((response) => console.log(response));
 }
 
-button$$.addEventListener("click", (event) => fetchData(event));
+button$$.addEventListener("click", realizarPeticion);
+
+
+
 // 1.3 En base al ejercicio anterior. Crea dinamicamente un elemento  por cada petición 
 // a la api que diga...'El nombre X tiene un Y porciento de ser de Z' etc etc.
 // EJ: El nombre Pepe tiene un 22 porciento de ser de ET y un 6 porciento de ser 
