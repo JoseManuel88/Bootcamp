@@ -12,24 +12,30 @@ body {
   .container {
     padding: 40px;
     margin: 0 auto;
+    flex-wrap: wrap;
   }
   h1 {
     text-transform: uppercase;
     text-align: center;
     font-size: 54px;
+    margin-bottom: 10px;
   }
   .card {
         list-style: none;
-    padding: 40px;
+    padding: 20px;
     background-color: #f4f4f4;
-    color: #222;
+    color: rgb(28, 28, 31);
     text-align: center;
     border-left: 82px;
-    border-radius: 100%;
-    display: -webkit-inline-box;
+    border-radius: 15%;
+    display: flex;
+    box-shadow: 5px 5px 15px -6px #000000;
+    flex-direction: column;
+    margin: 40px 5px;
+    width: 200px;
+}
     
-    
-  }
+  
   .card-title {
     text-transform: uppercase;
     font-size: 32px;
@@ -47,17 +53,19 @@ body {
     text-transform: capitalize;
   }
   .card-image {
-    height: 180px;
+    scale: 3;
    
   }
   #pokedex {
     padding-inline-start: 0;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
     grid-gap: 40px;
     display: grid;
-    /* align-content: stretch; */
-    /* justify-content: space-evenly; */
-    justify-items: center;
+    align-content: space-around;
+    justify-content: center;
+    display: grid;
+    align-items: center;
+    justify-items: stretch;
   }
 
 
@@ -65,7 +73,7 @@ body {
     animation: bounce 0.5s linear;
   }
 
-  .flip-card {
+  /* .flip-card {
     transform: rotateY(360deg);
     transition: transform 1s;
   }
@@ -73,7 +81,7 @@ body {
     transform: rotateY(360deg);
     transition: transform 1s;
     transition-delay: 3s;
-  }
+  } */
   @keyframes bounce {
     20% {
       transform: translateY(-30px);

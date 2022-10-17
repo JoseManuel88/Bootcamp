@@ -67,13 +67,13 @@ function renderPokemons(pokemons) {
     li$$.appendChild(div$$);
 
     pokedex$$.appendChild(li$$);
-// Creo la funcion click girara y tendra una animacion
+    // Creo un  escuchador con la funcion click que girara y tendra una animacion
     li$$.addEventListener("click", function () {
       li$$.classList.remove("animation");
       li$$.classList.add("flip-card");
 
       let infoPokemon;
-      // creo un bucle para que devuelva los movimientos que seran las habilidades
+      // creo un bucle para que devuelva toda la info de los pokemon
       for (let i = 0; i < ALL_POKEMONS_INFO.length; i++) {
         if (ALL_POKEMONS_INFO[i].name === li$$.id) {
           infoPokemon = ALL_POKEMONS_INFO[i];
@@ -83,12 +83,12 @@ function renderPokemons(pokemons) {
       p$$.textContent = "Habilidad";
 
       div$$.textContent = "";
-// creo un bucle para que me devuelva la habilidad especial
+      // creo un bucle para que me devuelva la habilidad especial desde infoPokemon creado anteriormente
 
       for (let i = 0; i < infoPokemon.abilities.length; i++) {
         div$$.textContent += " " + infoPokemon.abilities[i].ability.name;
       }
-// Creo una funcion para la animacion despues del click vuelva a su estado inicial despues de 3segundos
+      // Creo una funcion de de tiempo para la animacion despues del click vuelva a su estado inicial despues de 3segundos
       setTimeout(() => {
         li$$.classList.remove("flip-card");
         li$$.classList.add("animation");
@@ -131,7 +131,6 @@ function filtrarTipo(tipo) {
 }
 function llamarPoke() {
   renderPokemons(ALL_POKEMONS_INFO);
-  
 }
 
 window.onload = arrancar;
