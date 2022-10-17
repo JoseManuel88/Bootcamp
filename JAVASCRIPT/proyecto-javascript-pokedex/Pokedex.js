@@ -59,7 +59,7 @@ function renderPokemons(pokemons) {
     const div$$ = document.createElement("div");
     div$$.classList.add("card-subtitle");
     div$$.textContent = poke.types[0].type.name;
-    // aqui comparo pokemon por su tipo y le doy estilo ala lista de cartas
+    // aqui comparo pokemon por su tipo y le doy estilo  ala lista de cartas
 
     if (poke.types[0].type.name === "grass") {
       li$$.classList.add("grass");
