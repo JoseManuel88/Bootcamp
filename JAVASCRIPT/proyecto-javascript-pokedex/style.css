@@ -4,7 +4,7 @@ body {
           rgb(94, 189, 85) 0%,
           rgb(108, 209, 240) 54%,
           hwb(27 2% 19% / 0.966) 82%
-          /* hwb(28 25% 69% / 0.966) 82% */
+      
         )
       
       }
@@ -26,6 +26,7 @@ body {
     text-align: center;
     border-left: 82px;
     border-radius: 100%;
+    display: -webkit-inline-box;
     
     
   }
@@ -34,11 +35,16 @@ body {
     font-size: 32px;
     font-weight: normal;
     margin-bottom: 0;
-  }
+    font-family:fantasy;
+    /* margin-right: 14px; */
+      }
   .card-subtitle {
     font-weight: lighter;
-    color: #666;
+    color: rgb(38, 77, 184);
     margin-top: 5px;
+    font-family: cursive;
+    font-size: 20px;
+    text-transform: capitalize;
   }
   .card-image {
     height: 180px;
@@ -46,14 +52,14 @@ body {
   }
   #pokedex {
     padding-inline-start: 0;
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 20px;
-    
+    grid-gap: 40px;
+    display: grid;
+    /* align-content: stretch; */
+    /* justify-content: space-evenly; */
+    justify-items: center;
   }
-  /* .card:hover {
-    animation: bounce 0.5s linear;
-  } */
+
 
   .animation {
     animation: bounce 0.5s linear;
@@ -101,15 +107,10 @@ body {
  }
 .spinner {
   background-image: url('https://webstockreview.net/images/pikachu-clipart-png-icon.jpg');
-    /* background-color: violet; */
-    /* border-top: 5px solid rgb(66,139,202); */
-    /* border-right: 5px solid rgb(66,139,202); */
-    /* border-bottom: 5px solid rgb(66,139,202); */
-    /* border-left: 5px solid rgba(66,139,202,.2); */
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-duration: 1.5s;
-    animation-name: spinner-loading
+    animation-name: spinner-loading;
  }
 @keyframes spinner-loading{
   0% {
@@ -119,6 +120,10 @@ body {
   }
 }
 .return{
-  margin-left: 922px;
+  margin-left: 730px;
   margin-bottom: 65px;
+}
+.pokegame{
+width: 10px;
+
 }

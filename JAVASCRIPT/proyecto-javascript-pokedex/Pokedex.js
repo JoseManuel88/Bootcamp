@@ -32,13 +32,7 @@ function getOnePokemon(url) {
       console.log("Error obteniendo pokemon individual", error)
     );
 }
-/**
-  * <li class="card">
-           <img class="card-image" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="">
-           <p class="card-title">Bulbasur</p>
-           <div class="card-subtitle">Tipo Fuego</div>
-         </li>} pokemons 
-  */
+
 function renderPokemons(pokemons) {
   for (let i = 0; i < ALL_POKEMONS_INFO.length; i++) {
     const li = document.getElementById(ALL_POKEMONS_INFO[i].name);
@@ -73,25 +67,28 @@ function renderPokemons(pokemons) {
     li$$.appendChild(div$$);
 
     pokedex$$.appendChild(li$$);
-
+// Creo la funcion click girara y tendra una animacion
     li$$.addEventListener("click", function () {
       li$$.classList.remove("animation");
       li$$.classList.add("flip-card");
 
       let infoPokemon;
+      // creo un bucle para que devuelva los movimientos que seran las habilidades
       for (let i = 0; i < ALL_POKEMONS_INFO.length; i++) {
         if (ALL_POKEMONS_INFO[i].name === li$$.id) {
           infoPokemon = ALL_POKEMONS_INFO[i];
         }
       }
 
-      p$$.textContent = "Movimientos";
+      p$$.textContent = "Habilidad";
 
       div$$.textContent = "";
+// creo un bucle para que me devuelva la habilidad especial
+
       for (let i = 0; i < infoPokemon.abilities.length; i++) {
         div$$.textContent += " " + infoPokemon.abilities[i].ability.name;
       }
-
+// Creo una funcion para la animacion despues del click vuelva a su estado inicial despues de 3segundos
       setTimeout(() => {
         li$$.classList.remove("flip-card");
         li$$.classList.add("animation");
@@ -120,12 +117,12 @@ async function arrancar() {
   console.log("ALL_POKEMONS_INFO", ALL_POKEMONS_INFO);
   renderPokemons(ALL_POKEMONS_INFO);
 }
-
+// Creo una funcion filtrarTipo con un bucle que recorre el array de pokemon con otro bucle que me compara el tipo  y me lo pasa al array pokemonFiltrado
 function filtrarTipo(tipo) {
   pokemonFiltrado = [];
   for (let i = 0; i < ALL_POKEMONS_INFO.length; i++) {
-    for (let o = 0; o < ALL_POKEMONS_INFO[i].types.length; o++) {
-      if (ALL_POKEMONS_INFO[i].types[o].type.name === tipo) {
+    for (let j = 0; j < ALL_POKEMONS_INFO[i].types.length; j++) {
+      if (ALL_POKEMONS_INFO[i].types[j].type.name === tipo) {
         pokemonFiltrado.push(ALL_POKEMONS_INFO[i]);
       }
     }
