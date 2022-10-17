@@ -33,6 +33,7 @@ body {
     flex-direction: column;
     margin: 40px 5px;
     width: 200px;
+    
 }
     
   
@@ -53,7 +54,7 @@ body {
     text-transform: capitalize;
   }
   .card-image {
-    scale: 3;
+    scale: 135;
    
   }
   #pokedex {
