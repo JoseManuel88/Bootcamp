@@ -59,7 +59,8 @@ function renderPokemons(pokemons) {
     const div$$ = document.createElement("div");
     div$$.classList.add("card-subtitle");
     div$$.textContent = poke.types[0].type.name;
-    // aqui comparo pokemon por su tipo y le doy estilo  ala lista de cartas
+
+    // aqui comparo pokemon por su tipo y le doy estilo  ala lista de cartas con color ala carta segun su tipo
 
     if (poke.types[0].type.name === "grass") {
       li$$.classList.add("grass");
@@ -181,7 +182,7 @@ function filtrarTipo(tipo) {
 function llamarPoke() {
   renderPokemons(ALL_POKEMONS_INFO);
 }
-
+// Buscador input
 // creo funcion filtrado y me devuelve un array con los pokemon filtrados por nombre o id segun busques en el input buscador
 function searchPoke(param) {
   const arrayBuscado = ALL_POKEMONS_INFO.filter(
