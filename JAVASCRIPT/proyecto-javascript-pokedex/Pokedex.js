@@ -34,13 +34,14 @@ function getOnePokemon(url) {
 }
 
 function renderPokemons(pokemons) {
+  // bucle for para recorrer todos los pokemon uno a uno y despues lo elimina uno a uno para no tener nada en pantalla
   for (let i = 0; i < ALL_POKEMONS_INFO.length; i++) {
     const li = document.getElementById(ALL_POKEMONS_INFO[i].name);
     if (li !== undefined && li !== null) {
       li.parentElement.removeChild(li);
     }
   }
-
+  // creo un bucle para crear la carta con la imagen el nombre de cada pokemon
   pokemons.forEach(function (poke) {
     const li$$ = document.createElement("li");
     li$$.classList.add("card");
@@ -58,6 +59,54 @@ function renderPokemons(pokemons) {
     const div$$ = document.createElement("div");
     div$$.classList.add("card-subtitle");
     div$$.textContent = poke.types[0].type.name;
+    // aqui comparo pokemon por su tipo y le doy estilo ala lista de cartas
+
+    if (poke.types[0].type.name === "grass") {
+      li$$.classList.add("grass");
+      div$$.classList.add("grass-color");
+    } else if (poke.types[0].type.name === "fire") {
+      li$$.classList.add("fire");
+      div$$.classList.add("fire-color");
+    } else if (poke.types[0].type.name === "water") {
+      li$$.classList.add("water");
+      div$$.classList.add("water-color");
+    } else if (poke.types[0].type.name === "normal") {
+      li$$.classList.add("normal");
+      div$$.classList.add("normal-color");
+    } else if (poke.types[0].type.name === "bug") {
+      li$$.classList.add("bug");
+      div$$.classList.add("bug-color");
+    } else if (poke.types[0].type.name === "poison") {
+      li$$.classList.add("poison");
+      div$$.classList.add("poison-color");
+    } else if (poke.types[0].type.name === "electric") {
+      li$$.classList.add("electric");
+      div$$.classList.add("electric-color");
+    } else if (poke.types[0].type.name === "ground") {
+      li$$.classList.add("ground");
+      div$$.classList.add("ground-color");
+    } else if (poke.types[0].type.name === "fairy") {
+      li$$.classList.add("fairy");
+      div$$.classList.add("fairy-color");
+    } else if (poke.types[0].type.name === "fighting") {
+      li$$.classList.add("fighting");
+      div$$.classList.add("fighting-color");
+    } else if (poke.types[0].type.name === "psychic") {
+      li$$.classList.add("psychic");
+      div$$.classList.add("psychic-color");
+    } else if (poke.types[0].type.name === "rock") {
+      li$$.classList.add("rock");
+      div$$.classList.add("rock-color");
+    } else if (poke.types[0].type.name === "ghost") {
+      li$$.classList.add("ghost");
+      div$$.classList.add("ghost-color");
+    } else if (poke.types[0].type.name === "ice") {
+      li$$.classList.add("ice");
+      div$$.classList.add("ice-color");
+    } else if (poke.types[0].type.name === "dragon") {
+      li$$.classList.add("dragon");
+      div$$.classList.add("dragon-color");
+    }
 
     this.data = true;
 
@@ -131,6 +180,15 @@ function filtrarTipo(tipo) {
 }
 function llamarPoke() {
   renderPokemons(ALL_POKEMONS_INFO);
+}
+
+// creo funcion filtrado y me devuelve un array con los pokemon filtrados por nombre o id
+function searchPoke(param) {
+  const arrayBuscado = ALL_POKEMONS_INFO.filter(
+    (x) => x.name.toLowerCase().includes(param) || x.id == param
+  );
+
+  renderPokemons(arrayBuscado);
 }
 
 window.onload = arrancar;

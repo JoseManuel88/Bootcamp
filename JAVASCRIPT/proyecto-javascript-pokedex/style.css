@@ -32,14 +32,14 @@ body {
     box-shadow: 5px 5px 15px -6px #000000;
     flex-direction: column;
     margin: 40px 5px;
-    width: 200px;
-    
+    width: 140px;
+    scale:0,5;
 }
     
   
   .card-title {
     text-transform: uppercase;
-    font-size: 32px;
+    font-size: 25px;
     font-weight: normal;
     margin-bottom: 0;
     font-family:fantasy;
@@ -47,7 +47,7 @@ body {
       }
   .card-subtitle {
     font-weight: lighter;
-    color: rgb(38, 77, 184);
+    color: rgb(17, 17, 19);
     margin-top: 5px;
     font-family: cursive;
     font-size: 20px;
@@ -58,15 +58,10 @@ body {
    
   }
   #pokedex {
-    padding-inline-start: 0;
-    grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
-    grid-gap: 40px;
+      padding-inline-start: 0;
+    grid-template-columns: repeat(auto-fit, minmax(208px, 1fr));
+     /* grid-gap: 40px; */
     display: grid;
-    align-content: space-around;
-    justify-content: center;
-    display: grid;
-    align-items: center;
-    justify-items: stretch;
   }
 
 
@@ -74,15 +69,15 @@ body {
     animation: bounce 0.5s linear;
   }
 
-  /* .flip-card {
-    transform: rotateY(360deg);
+  .flip-card {
+    transform: rotateY(360deg );
     transition: transform 1s;
   }
   .flip-card2 {
     transform: rotateY(360deg);
     transition: transform 1s;
     transition-delay: 3s;
-  } */
+  } 
   @keyframes bounce {
     20% {
       transform: translateY(-30px);
@@ -129,10 +124,110 @@ body {
   }
 }
 .return{
-  margin-left: 730px;
-  margin-bottom: 65px;
+  margin-left: 415px;
+  margin-top: 53px;
+  margin-right: 100px;
 }
 .pokegame{
 width: 10px;
 
+}
+.search{
+  justify-content: center;
+}
+
+.grass {
+  background-color: rgb(82, 207, 103);
+}
+
+.fire {
+  background-color: rgb(211, 120, 97);
+}
+.normal{
+  background-color: brown;
+}
+.water{
+  background-color: rgb(63, 104, 219);
+}
+.bug{
+  background-color: lightgreen;
+}
+.poison{
+  background-color: blueviolet;
+}
+.electric{
+  background-color: yellow;
+}
+.ground{
+  background-color: darkgoldenrod;
+}
+.fairy{
+  background-color: hotpink;
+}
+.fighting{
+  background-color: tomato;
+}
+.psychic{
+  background-color: darkkhaki;
+}
+.rock{
+  background-color: darkgrey;
+}
+.ghost{
+  background-color: plum;
+}
+.ice{
+  background-color: deepskyblue;
+}
+.dragon{
+  background-color: lime;
+}
+
+
+
+
+.grass-color{
+  background-color: rgb(7, 221, 150);
+}
+.fire-color{
+  background-color: rgb(235, 27, 12);
+}
+.normal-color{
+  background-color: chocolate;
+}
+.water-color{
+  background-color: deepskyblue;
+}
+.bug-color{
+  background-color: seagreen;
+}
+.poison-color{
+  background-color: palevioletred;
+}
+.electric-color{
+  background-color: yellowgreen;
+}
+.ground-color{
+  background-color: goldenrod;
+}
+.fairy-color{
+  background-color: fuchsia;
+}
+.fighting-color{
+  background-color: red;
+}
+.psychic-color{
+  background-color: khaki;
+}
+.rock-color{
+  background-color: grey;
+}
+.ghost-color{
+  background-color: purple;
+}
+.ice-color{
+  background-color: aqua;
+}
+.dragon-color{
+  background-color: greenyellow;
 }

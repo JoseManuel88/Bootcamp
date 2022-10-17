@@ -16,11 +16,27 @@
      
       <h1>Pokedex</h1><img style="height: 90px; border-right:10px; margin-right: 20px;" src="https://th.bing.com/th/id/R.d3aa8ed7f6fbfae69aab6758989afafc?rik=AJaSqNz5gPJMHg&riu=http%3a%2f%2fpokegame.org%2fwp-content%2fuploads%2f2015%2f05%2fLOGO.png&ehk=uizc1FA3fxdfiXbSGP%2bHeeTUC5s%2bHMz0MQ%2bInCT5uIQ%3d&risl=&pid=ImgRaw&r=0" alt="">
       <!-- Creo botones para que me indique el tipo de pokemon -->
-      <button onclick="filtrarTipo('grass')">Hierba</button> 
-      <!-- <button onclick="filtrarTipo('fire')">Fuego</button> -->
-      <!-- <button onclick="filtrarTipo('water')">Agua</button> -->
-      <!-- <button onclick="filtrarTipo('normal')">Normal</button> -->
+      <button style ="margin-right: 15px"; onclick="filtrarTipo('grass')">Hierba</button> 
+      <button style ="margin-right: 15px"; onclick="filtrarTipo('fire')">Fuego</button>
+      <button style ="margin-right: 15px"; onclick="filtrarTipo('water')">Agua</button>
+      <button style ="margin-right: 15px"; onclick="filtrarTipo('normal')">Normal</button>
+      <button style ="margin-right: 15px"; onclick="filtrarTipo('poison')">Veneno</button>
+      <button style ="margin-right: 15px"; onclick="filtrarTipo('electric')">Electricos</button>
+      <button style ="margin-right: 15px"; onclick="filtrarTipo('bug')">Bicho</button>
+      <button style ="margin-right: 15px"; onclick="filtrarTipo('ground')">Tierra</button>
+      <button style ="margin-right: 15px"; onclick="filtrarTipo('fairy')">Hada</button>
+      <button style ="margin-right: 15px"; onclick="filtrarTipo('fighting')">Peleador</button>
+      <button style ="margin-right: 15px"; onclick="filtrarTipo('psychic')">Psychico</button>
+      <button style ="margin-right: 15px"; onclick="filtrarTipo('rock')">Roca</button>
+      <button style ="margin-right: 15px"; onclick="filtrarTipo('ice')">Hielo</button>
+      <button style ="margin-right: 15px"; onclick="filtrarTipo('dragon')">Dragon</button>
+      
+
       <button class= "return" onclick="llamarPoke()">Return</button>
+
+      <input id="inputBuscar" class="search" type="text" onInput="searchPoke(value)">
+      
+      
       <ol id="pokedex"></ol>
     </div>
     <div class="width">
