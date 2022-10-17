@@ -182,7 +182,7 @@ function llamarPoke() {
   renderPokemons(ALL_POKEMONS_INFO);
 }
 
-// creo funcion filtrado y me devuelve un array con los pokemon filtrados por nombre o id
+// creo funcion filtrado y me devuelve un array con los pokemon filtrados por nombre o id segun busques en el input buscador
 function searchPoke(param) {
   const arrayBuscado = ALL_POKEMONS_INFO.filter(
     (x) => x.name.toLowerCase().includes(param) || x.id == param
