@@ -1,61 +1,55 @@
+window.onload = arrancar;
 
- window.onload = arrancar;
- 
-
+// creo un array con todos los pokemon
 const pokedex$$ = document.querySelector("#pokedex");
-const ALL_POKEMONS_INFO = []; // Cuando una variable se declara en scope global para ser usada por otros, se hace en mayúsculas.
+const ALL_POKEMONS_INFO = [];
+// crea una variable para los pokemon filtrados por tipo o por el buscador
 let pokemonFiltrado = [];
-const data = false;
+
+// creo una funcion que me devuelve los pokemon de la api
 function getAllPokemons() {
   return fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
     .then((response) => response.json())
     .then((response) => {
       return response.results;
-    })
-    .catch((error) =>
-      console.log("Error obteniendo todos los pokemons", error)
-    );
+    });
 }
 // Director de orquesta: irá llamando a otras funciones.
+// funcion arrancar hace la llamada a getAllPokemons para que devuelva sus datos ala const allPokemons
 async function arrancar() {
-  // console.log("Ejecuntando peticiones pokedex...");
-
-  const allPokemons = await getAllPokemons(); // array de objetos con name y url por cada pokemon
-  // console.log('allPokemons:', allPokemons)
+  const allPokemons = await getAllPokemons();
 
   // Itero por el array de pokemons, llamo a getOnePokemon una vez
   // por cada pokemon, pasándole la url de cada pokemon.
   for (const pokemon of allPokemons) {
-    // Pido a la api la información de cada pokemon individual y la guardo en una variable
+    // haces la llamada de getOnePokemon que me devuelve el valor uno a uno de los pokemon a la const pokemonIndividualInfo
     const pokemonIndividualInfo = await getOnePokemon(pokemon.url);
+    // en la variable ALL_POKEMONS_INFO estamos pasando los pokemon individualmente desde pokemonIndividualInfo
     ALL_POKEMONS_INFO.push(pokemonIndividualInfo);
   }
-
-  console.log("ALL_POKEMONS_INFO", ALL_POKEMONS_INFO);
+  // llamada de la funcion renderPokemons
   renderPokemons(ALL_POKEMONS_INFO);
 }
 
-// creo una funcion que me devueleve uno a uno los pokemon
+// Creo una funcion que me devueleve uno a uno los pokemon
 function getOnePokemon(url) {
   return fetch(url)
     .then((response) => response.json())
     .then((response) => {
       return response;
-    })
-    .catch((error) =>
-      console.log("Error obteniendo pokemon individual", error)
-    );
+    });
 }
+
 // creo funcion que me devuelve pokemon renderizado
 function renderPokemons(pokemons) {
-  // bucle for para recorrer todos los pokemon uno a uno y despues lo elimina uno a uno para no tener nada en pantalla
+  // bucle for para recorrer todos los pokemon uno a uno y despues lo elimina uno a uno para tener la pantalla vacia desde el inicio
   for (let i = 0; i < ALL_POKEMONS_INFO.length; i++) {
     const li = document.getElementById(ALL_POKEMONS_INFO[i].name);
     if (li !== undefined && li !== null) {
       li.parentElement.removeChild(li);
     }
   }
-  // creo un bucle para crear  una lista de cartas
+  // creo un bucle para crear  una lista con las  cartas
   pokemons.forEach(function (poke) {
     const li$$ = document.createElement("li");
 
@@ -66,11 +60,6 @@ function renderPokemons(pokemons) {
     const p2$$ = document.createElement("p");
     p2$$.classList.add("card-id");
     p2$$.textContent = poke.id;
-
-    // const p3$$ = document.createElement("p");
-    // p3$$.classList.add("card-ability");
-    // p3$$.textContent = infoPokemon.abilities[i].ability;
-
 
     const img$$ = document.createElement("img");
     img$$.src = poke.sprites.front_default;
@@ -87,11 +76,8 @@ function renderPokemons(pokemons) {
     li$$.appendChild(img$$);
     li$$.appendChild(p$$);
     li$$.appendChild(div$$);
-    // li$$.appendChild(p3$$);
-    // this.data = true;
 
-// empiezo
-    // aqui comparo pokemon por su tipo y le doy estilo  ala lista de cartas con color ala carta segun su tipo
+    // Aqui comparo pokemon por su tipo y le doy estilo  ala lista de cartas con color ala carta segun su tipo
 
     if (poke.types[0].type.name === "grass") {
       li$$.classList.add("grass");
@@ -139,17 +125,18 @@ function renderPokemons(pokemons) {
       li$$.classList.add("dragon");
       div$$.classList.add("dragon-color");
     }
-    
+    // creo un remove para que desaparezca el spinner cuando carga mi pagina
 
     document.getElementById("main").classList.remove("spinner");
 
     // Creo un  escuchador con la funcion click que girara y tendra una animacion
+
     li$$.addEventListener("click", function () {
       li$$.classList.remove("animation");
       li$$.classList.add("flip-card");
 
       let infoPokemon;
-      // creo un bucle para que devuelva toda la info de los pokemon
+      // creo un bucle para que devuelva toda la info de los pokemon ala variable infoPokemon
       for (let i = 0; i < ALL_POKEMONS_INFO.length; i++) {
         if (ALL_POKEMONS_INFO[i].name === li$$.id) {
           infoPokemon = ALL_POKEMONS_INFO[i];
@@ -202,6 +189,6 @@ function searchPoke(param) {
 }
 
 // const button$$ = document.createElement("button");
-//     button$$.classList("button");
-//        button$$.textContent = ("Electrico");
-//     button$$.appendChild(div$$);
+//   button$$.classList.add("button");
+//      button$$.textContent = "Electrico";
+//      document.getElementById('contenedor').appendChild(button$$);

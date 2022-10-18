@@ -1,262 +1,267 @@
 body {
-        background: linear-gradient(
-          90deg,
-          rgb(94, 189, 85) 0%,
-          rgb(108, 209, 240) 54%,
-          hwb(27 2% 19% / 0.966) 82%
-      
-        )
-      
-      }
-      .pokegame{
-        height: 90px;
-         border-right:10px;
-          margin-right: 20px;
-          margin-top: 10px;
-      }
-  
-  .container {
-    padding: 40px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-  }
-  h1 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 82px;
-    margin-bottom: 40px;
-    margin-top: 10px;
-    color: red;
-  }
-  .card {
-        list-style: none;
-    padding: 20px;
-    background-color: #f4f4f4;
-    color: rgb(28, 28, 31);
-    text-align: center;
-    border-left: 82px;
-    border-radius: 15%;
-    display: flex;
-    box-shadow: 5px 5px 15px -6px #000000;
-    flex-direction: column;
-    margin: 40px 5px;
-    width: 140px;
-    scale:0,5;
+  background: linear-gradient(
+    90deg,
+    rgb(94, 189, 85) 0%,
+    rgb(108, 209, 240) 54%,
+    hwb(27 2% 19% / 0.966) 82%
+  );
 }
-    
-  .card-id{
-    font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 0;
-    font-family:fantasy;
+.pokegame {
+  height: 90px;
+  border-right: 10px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
 
-  }
-  .card-title {
-    text-transform: uppercase;
-    font-size: 25px;
-    font-weight: normal;
-    margin-bottom: 0;
-    font-family:fantasy;
-    /* margin-right: 14px; */
-      }
-  .card-subtitle {
-    font-weight: lighter;
-    color: rgb(17, 17, 19);
-    margin-top: 5px;
-    font-family: cursive;
-    font-size: 20px;
-    text-transform: capitalize;
-  }
-  .card-image {
-    scale: 135;
-   
-  }
-  #pokedex {
-      padding-inline-start: 0;
-    grid-template-columns: repeat(auto-fit, minmax(208px, 1fr));
-     /* grid-gap: 40px; */
-    display: grid;
-  }
+.container {
+  padding: 40px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+h1 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 82px;
+  margin-bottom: 40px;
+  margin-top: 10px;
+  color: red;
+}
+.card {
+  list-style: none;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: rgb(28, 28, 31);
+  text-align: center;
+  border-left: 82px;
+  border-radius: 15%;
+  display: flex;
+  box-shadow: 5px 5px 15px -6px #000000;
+  flex-direction: column;
+  margin: 40px 5px;
+  width: 140px;
+  scale: 0, 5;
+}
 
+.card-id {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 0;
+  font-family: fantasy;
+}
+.card-title {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: normal;
+  margin-bottom: 0;
+  font-family: fantasy;
+  /* margin-right: 14px; */
+}
+.card-subtitle {
+  font-weight: lighter;
+  color: rgb(17, 17, 19);
+  margin-top: 5px;
+  font-family: cursive;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.card-image {
+  scale: 135;
+}
+#pokedex {
+  padding-inline-start: 0;
+  grid-template-columns: repeat(auto-fit, minmax(208px, 1fr));
+  /* grid-gap: 40px; */
+  display: grid;
+}
 
-  .animation {
-    animation: bounce 0.5s linear;
-  }
+button:hover {
+  cursor: pointer;
+}
 
-  .flip-card {
-    transform: rotateY(360deg );
-    transition: transform 1s;
-  }
-  .flip-card2 {
-    transform: rotateY(360deg);
-    transition: transform 1s;
-    transition-delay: 3s;
-  } 
-
-  .width {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-  }
-
-
-  .spinner,.spinner:after{
-    display: block;
-    width: 100px;
-    height: 100px;
-    background-size: 100px 100px;
-    border-radius: 50%;
-  }
- .spinner { 
-  background-image: url('https://webstockreview.net/images/pikachu-clipart-png-icon.jpg');
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-duration: 1.5s;
-    animation-name: spinner-loading;
- }
-@keyframes spinner-loading{
+.animation {
+  animation: bounce 0.2s linear;
+}
+@keyframes bounce {
   0% {
-      transform: rotate(0deg)
-  } to {
-      transform: rotate(1turn)
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+/* #demo { animation: bounce 0.5s linear; } */
+
+.flip-card {
+  transform: rotateY(360deg);
+  transition: transform 1s;
+}
+.flip-card2 {
+  transform: rotateY(360deg);
+  transition: transform 1s;
+  transition-delay: 3s;
+}
+
+.width {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.spinner,
+.spinner:after {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-size: 100px 100px;
+  border-radius: 50%;
+}
+.spinner {
+  background-image: url("https://webstockreview.net/images/pikachu-clipart-png-icon.jpg");
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 1.5s;
+  animation-name: spinner-loading;
+}
+@keyframes spinner-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn);
   }
 }
 .button {
   margin-right: 15px;
   background-color: rgb(82, 207, 103);
   color: black;
-  border:none;
-  border-radius:10px;
+  border: none;
+  border-radius: 10px;
   box-shadow: 5px 5px 15px -6px #000000;
 }
-.typeIcon{
+.typeIcon {
   width: 40px;
 }
 .button1 {
   margin-right: 15px;
   background-color: rgb(211, 120, 97);
   color: black;
-  border:none;
-  border-radius:10px;
+  border: none;
+  border-radius: 10px;
   box-shadow: 5px 5px 15px -6px #000000;
 }
-
 
 .button2 {
   margin-right: 15px;
   background-color: rgb(63, 104, 219);
   color: black;
-  border:none;
-  border-radius:10px;
+  border: none;
+  border-radius: 10px;
   box-shadow: 5px 5px 15px -6px #000000;
 }
 .button3 {
   margin-right: 15px;
   background-color: brown;
   color: black;
-  border:none;
-  border-radius:10px;
+  border: none;
+  border-radius: 10px;
   box-shadow: 5px 5px 15px -6px #000000;
 }
 .button4 {
   margin-right: 15px;
   background-color: blueviolet;
   color: black;
-  border:none;
-  border-radius:10px;
+  border: none;
+  border-radius: 10px;
   box-shadow: 5px 5px 15px -6px #000000;
 }
-.button5{
+.button5 {
   margin-right: 15px;
-  background-color:yellow;;
+  background-color: yellow;
   color: black;
-  border:none;
-  border-radius:10px;
+  border: none;
+  border-radius: 10px;
   box-shadow: 5px 5px 15px -6px #000000;
-
 }
-.button6{margin-right: 15px;
-  background-color:lightgreen;
-  color: black;
-  border:none;
-  border-radius:10px;
-  box-shadow: 5px 5px 15px -6px #000000;
-
-}
-.button7{
+.button6 {
   margin-right: 15px;
-  background-color:darkgoldenrod;
+  background-color: lightgreen;
   color: black;
-  border:none;
-  border-radius:10px;
+  border: none;
+  border-radius: 10px;
   box-shadow: 5px 5px 15px -6px #000000;
 }
-.button8{
+.button7 {
   margin-right: 15px;
-  background-color:hotpink;
+  background-color: darkgoldenrod;
   color: black;
-  border:none;
-  border-radius:10px;
+  border: none;
+  border-radius: 10px;
   box-shadow: 5px 5px 15px -6px #000000;
 }
-.button9{
+.button8 {
+  margin-right: 15px;
+  background-color: hotpink;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px -6px #000000;
+}
+.button9 {
   margin-right: 15px;
   background-color: rgba(224, 40, 40, 0.801);
   color: black;
-  border:none;
-  border-radius:10px;
-  box-shadow: 5px 5px 15px -6px #000000
-
-}
-.button10{
-  margin-right: 15px;
-  background-color:violet;
-  color: black;
-  border:none;
-  border-radius:10px;
+  border: none;
+  border-radius: 10px;
   box-shadow: 5px 5px 15px -6px #000000;
 }
-.button11{
+.button10 {
+  margin-right: 15px;
+  background-color: violet;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px -6px #000000;
+}
+.button11 {
   margin-right: 15px;
   background-color: rgb(255, 207, 87);
   color: black;
-  border:none;
-  border-radius:10px;
+  border: none;
+  border-radius: 10px;
   box-shadow: 5px 5px 15px -6px #000000;
 }
-.button12{
+.button12 {
   margin-right: 15px;
   background-color: deepskyblue;
   color: black;
-  border:none;
-  border-radius:10px;
+  border: none;
+  border-radius: 10px;
   box-shadow: 5px 5px 15px -6px #000000;
 }
-.button13{
+.button13 {
   margin-right: 15px;
   background-color: lime;
   color: black;
-  border:none;
-  border-radius:10px;
+  border: none;
+  border-radius: 10px;
   box-shadow: 5px 5px 15px -6px #000000;
 }
-.return{
+.return {
   margin-left: 415px;
   margin-top: 53px;
   margin-right: 100px;
   margin-right: 15px;
-  background-color:deepskyblue;
+  background-color: deepskyblue;
   color: black;
-  border:none;
-  border-radius:10px;
+  border: none;
+  border-radius: 10px;
   box-shadow: 5px 5px 15px -6px #000000;
   /* width: 40px; */
 }
-.search{
+.search {
   justify-content: center;
 }
-
 
 /* background-color de la carta */
 .grass {
@@ -266,90 +271,90 @@ body {
 .fire {
   background-color: rgb(211, 120, 97);
 }
-.normal{
+.normal {
   background-color: brown;
 }
-.water{
+.water {
   background-color: rgb(63, 104, 219);
 }
-.bug{
+.bug {
   background-color: lightgreen;
 }
-.poison{
+.poison {
   background-color: blueviolet;
 }
-.electric{
+.electric {
   background-color: yellow;
 }
-.ground{
+.ground {
   background-color: darkgoldenrod;
 }
-.fairy{
+.fairy {
   background-color: hotpink;
 }
-.fighting{
+.fighting {
   background-color: tomato;
 }
-.psychic{
+.psychic {
   background-color: violet;
 }
-.rock{
+.rock {
   background-color: darkgrey;
 }
-.ghost{
+.ghost {
   background-color: plum;
 }
-.ice{
+.ice {
   background-color: deepskyblue;
 }
-.dragon{
+.dragon {
   background-color: lime;
 }
 
 /* background-color del tipo de pokemon */
 
-.grass-color{
+.grass-color {
   background-color: rgb(7, 221, 150);
 }
-.fire-color{
+.fire-color {
   background-color: rgb(235, 27, 12);
 }
-.normal-color{
+.normal-color {
   background-color: chocolate;
 }
-.water-color{
+.water-color {
   background-color: deepskyblue;
 }
-.bug-color{
+.bug-color {
   background-color: seagreen;
 }
-.poison-color{
+.poison-color {
   background-color: palevioletred;
 }
-.electric-color{
+.electric-color {
   background-color: yellowgreen;
 }
-.ground-color{
+.ground-color {
   background-color: goldenrod;
 }
-.fairy-color{
+.fairy-color {
   background-color: fuchsia;
 }
-.fighting-color{
+.fighting-color {
   background-color: red;
 }
-.psychic-color{
+.psychic-color {
   background-color: palevioletred;
 }
-.rock-color{
+.rock-color {
   background-color: grey;
 }
-.ghost-color{
+.ghost-color {
   background-color: purple;
 }
-.ice-color{
+.ice-color {
   background-color: aqua;
 }
-.dragon-color{
+.dragon-color {
   background-color: greenyellow;
 }
