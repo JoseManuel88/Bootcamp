@@ -1,5 +1,4 @@
 body {
-  
   background: linear-gradient(
     90deg,
     rgb(94, 189, 85) 0%,
@@ -8,18 +7,16 @@ body {
   );
 }
 .pokegame {
-   height: 90px;
+  height: 90px;
   border-right: 10px;
   margin-right: 20px;
   margin-top: 10px;
 }
 
 .container {
-  
   padding: 40px;
   margin: 0 auto;
   flex-wrap: wrap;
-  
 }
 h1 {
   margin-top: -330px;
@@ -97,7 +94,6 @@ button:hover {
 .flip-card2 {
   transform: rotateY(360deg);
   transition: transform 0.5s;
-  
 }
 
 .width {
