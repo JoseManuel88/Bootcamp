@@ -1,11 +1,6 @@
-/**
- * Requisitos
- * - Obtener lista pokedex y guardar en variable ✅
- * - Obtener el listado de todos los pokemons ✅
- * - Obtener todos los pokemons individuales uno por uno ✅
- * - Para obtener todos los pokemons, me dice el ejercicio que debo iterar uno por uno. ✅
- * - Añadir al DOM los pokemons, dentro del div pokedex.
- */
+
+ window.onload = arrancar;
+ 
 
 const pokedex$$ = document.querySelector("#pokedex");
 const ALL_POKEMONS_INFO = []; // Cuando una variable se declara en scope global para ser usada por otros, se hace en mayúsculas.
@@ -68,6 +63,15 @@ function renderPokemons(pokemons) {
     li$$.id = poke.name;
     pokedex$$.appendChild(li$$);
     // creo la imagen con un titulo con el nombre y un subtitulo
+    const p2$$ = document.createElement("p");
+    p2$$.classList.add("card-id");
+    p2$$.textContent = poke.id;
+
+    // const p3$$ = document.createElement("p");
+    // p3$$.classList.add("card-ability");
+    // p3$$.textContent = infoPokemon.abilities[i].ability;
+
+
     const img$$ = document.createElement("img");
     img$$.src = poke.sprites.front_default;
     img$$.alt = poke.name;
@@ -79,10 +83,14 @@ function renderPokemons(pokemons) {
     const div$$ = document.createElement("div");
     div$$.classList.add("card-subtitle");
     div$$.textContent = poke.types[0].type.name;
+    li$$.appendChild(p2$$);
     li$$.appendChild(img$$);
     li$$.appendChild(p$$);
     li$$.appendChild(div$$);
+    // li$$.appendChild(p3$$);
+    // this.data = true;
 
+// empiezo
     // aqui comparo pokemon por su tipo y le doy estilo  ala lista de cartas con color ala carta segun su tipo
 
     if (poke.types[0].type.name === "grass") {
@@ -131,10 +139,9 @@ function renderPokemons(pokemons) {
       li$$.classList.add("dragon");
       div$$.classList.add("dragon-color");
     }
+    
 
-    this.data = true;
-    // creo el spinner con imagen
-    // document.getElementById("main").classList.remove("spinner");
+    document.getElementById("main").classList.remove("spinner");
 
     // Creo un  escuchador con la funcion click que girara y tendra una animacion
     li$$.addEventListener("click", function () {
@@ -157,7 +164,7 @@ function renderPokemons(pokemons) {
       for (let i = 0; i < infoPokemon.abilities.length; i++) {
         div$$.textContent += " " + infoPokemon.abilities[i].ability.name;
       }
-      // Creo una funcion  tiempo para la animacion despues del click vuelva a su estado inicial despues de 3segundos
+      // Creo una funciopara la animacion despues del click vuelva a su estado inicial despues de 3segundos
       setTimeout(() => {
         li$$.classList.remove("flip-card");
         li$$.classList.add("animation");
@@ -169,6 +176,7 @@ function renderPokemons(pokemons) {
 }
 
 // Creo una funcion filtrarTipo con un bucle que recorre el array de pokemon con otro bucle que me compara el tipo  y me lo pasa al array pokemonFiltrado
+// Asi me funcionara el boton de tipo
 function filtrarTipo(tipo) {
   pokemonFiltrado = [];
   for (let i = 0; i < ALL_POKEMONS_INFO.length; i++) {
@@ -193,4 +201,7 @@ function searchPoke(param) {
   renderPokemons(arrayBuscado);
 }
 
-window.onload = arrancar;
+// const button$$ = document.createElement("button");
+//     button$$.classList("button");
+//        button$$.textContent = ("Electrico");
+//     button$$.appendChild(div$$);
