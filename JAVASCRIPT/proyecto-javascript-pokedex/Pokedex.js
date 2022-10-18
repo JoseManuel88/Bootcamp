@@ -56,7 +56,7 @@ function renderPokemons(pokemons) {
     li$$.classList.add("card");
     li$$.id = poke.name;
     pokedex$$.appendChild(li$$);
-    // creo la imagen con un titulo con el nombre y un subtitulo
+    // creo la carta con la imagen con un titulo con el nombre y un subtitulo
     const p2$$ = document.createElement("p");
     p2$$.classList.add("card-id");
     p2$$.textContent = poke.id;

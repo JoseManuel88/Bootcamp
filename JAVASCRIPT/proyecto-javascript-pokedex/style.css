@@ -83,23 +83,22 @@ button:hover {
   animation: bounce 0.2s linear;
 }
 @keyframes bounce {
-  0% {
+  100% {
     transform: translateY(0);
   }
   100% {
     transform: translateY(-50px);
   }
 }
-/* #demo { animation: bounce 0.5s linear; } */
 
 .flip-card {
   transform: rotateY(360deg);
-  transition: transform 1s;
+  transition: transform 1.5s;
 }
 .flip-card2 {
   transform: rotateY(360deg);
-  transition: transform 1s;
-  transition-delay: 3s;
+  transition: transform 0.5s;
+  
 }
 
 .width {
@@ -260,7 +259,17 @@ button:hover {
   /* width: 40px; */
 }
 .search {
+  width: 180px;
   justify-content: center;
+  text-align: center;
+  font-family: fantasy;
+  color: black;
+  background: linear-gradient(
+    90deg,
+    rgb(94, 189, 85) 0%,
+    rgb(108, 209, 240) 54%,
+    hwb(325 61% 1% / 0.966) 82%
+  );
 }
 
 /* background-color de la carta */
