@@ -1,9 +1,9 @@
 window.onload = arrancar;
 
-// creo un array con todos los pokemon
+// creo un array con todos los pokemon 
 const pokedex$$ = document.querySelector("#pokedex");
 const ALL_POKEMONS_INFO = [];
-// crea una variable para los pokemon filtrados por tipo o por el buscador
+// crea una variable para los pokemon filtrados por tipo p o por el buscador
 let pokemonFiltrado = [];
 
 // creo una funcion que me devuelve los pokemon de la api
@@ -14,7 +14,7 @@ function getAllPokemons() {
       return response.results;
     });
 }
-// Director de orquesta: irá llamando a otras funciones.
+
 // funcion arrancar hace la llamada a getAllPokemons para que devuelva sus datos ala const allPokemons
 async function arrancar() {
   const allPokemons = await getAllPokemons();
