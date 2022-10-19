@@ -30,9 +30,9 @@ h1 {
   color: rgb(28, 28, 31);
   text-align: center;
   border-left: 82px;
-  border-radius: 15%;
+  border-radius: 7%;
   display: flex;
-  box-shadow: 5px 5px 15px -6px #000000;
+  box-shadow: 11px 15px 25px 3px #000000;
   flex-direction: column;
   margin: 40px 5px;
   width: 140px;
