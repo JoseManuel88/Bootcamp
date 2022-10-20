@@ -19,7 +19,7 @@ body {
   flex-wrap: wrap;
 }
 h1 {
-  margin-top: -330px;
+  margin-top: -300px;
   margin-left: 80px;
   margin-bottom: -325px;
 }
@@ -61,9 +61,9 @@ h1 {
   font-size: 20px;
   text-transform: capitalize;
 }
-.card-image {
-  scale: 135;
-}
+/* .card-image {
+  scale: 135px;
+} */
 #pokedex {
   padding-inline-start: 0;
   grid-template-columns: repeat(auto-fit, minmax(208px, 1fr));

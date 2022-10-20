@@ -1,6 +1,6 @@
 window.onload = arrancar;
 
-// creo un array con todos los pokemon 
+// creo un array que contendra todos los pokemon 
 const pokedex$$ = document.querySelector("#pokedex");
 const ALL_POKEMONS_INFO = [];
 // crea una variable para los pokemon filtrados por tipo p o por el buscador
@@ -49,7 +49,7 @@ function renderPokemons(pokemons) {
       li.parentElement.removeChild(li);
     }
   }
-  // creo un bucle para crear  una lista con las  cartas
+  // creo  una lista con las  cartas
   pokemons.forEach(function (poke) {
     const li$$ = document.createElement("li");
 
@@ -57,7 +57,7 @@ function renderPokemons(pokemons) {
     li$$.id = poke.name;
     pokedex$$.appendChild(li$$);
     // creo la carta con la imagen con un titulo con el nombre y un subtitulo
-    const p2$$ = document.createElement("p");
+    const p2$$ = document.createElement("p"); //creo el p que me muestra el id
     p2$$.classList.add("card-id");
     p2$$.textContent = poke.id;
 
@@ -161,8 +161,9 @@ function renderPokemons(pokemons) {
     });
   });
 }
-
-// Creo una funcion filtrarTipo con un bucle que recorre el array de pokemon con otro bucle que me compara el tipo  y me lo pasa al array pokemonFiltrado
+// Boton de tipo
+// Creo una funcion filtrarTipo con un bucle que recorre el array de pokemon con otro bucle que me compara el tipo 
+//  y me lo pasa al array pokemonFiltrado
 // Asi me funcionara el boton de tipo
 function filtrarTipo(tipo) {
   pokemonFiltrado = [];
