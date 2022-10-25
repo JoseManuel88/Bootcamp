@@ -1,19 +1,22 @@
 {
-  "name": "session-3",
+  "name": "node_project1_movies",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js",
+    "dev":"nodemon index.js",
+    "moviesSeed":"node ./src/utils/seeds/movies.seed:js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "mongoose": "^6.7.0",
+    "mongoose": "^6.6.7",
     "nodemon": "^2.0.20"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
