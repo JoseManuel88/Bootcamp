@@ -1,6 +1,6 @@
 const express = require('express');
-const db = require('./src/utils/database/db');
-const indexRoutes = require(`./src/api/index/index.routes`); //importamos el router
+const db = require('./src/utils/database/db');//conectamos con la base de datos
+const indexRoutes = require('./src/api/index/index.routes'); //importamos el router
 const characterRoutes = require('./src/api/characters/characters.routes');//importamos el router
 
 db.connectDb();
