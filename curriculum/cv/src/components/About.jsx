@@ -1,9 +1,9 @@
 import React from 'react'
-
+import "./About.css";
 export const About = ({aboutMe}) => {
     console.log(aboutMe);
   return (
-    <div className='about'>
+    <div className="about">
       <div>
         <div>About me</div>
         <p>{aboutMe[0].info}</p>

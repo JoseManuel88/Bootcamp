@@ -10,12 +10,13 @@ import { CV } from "./CV/CV";
 
 const { hero, education, experience, languages, habilities, volunteer } = CV;
 function App() {
-  const [showEducation, setShowEducation] = useState(true);
+  const [showEducation, setShowEducation] = useState(true,false);
   return (
     <div className="App">
-      <h1>CURRICULUM</h1>
+      <h1>CURRICULUM VITAE</h1>
         <Hero hero={hero} />
         <About aboutMe={hero.aboutMe} />
+        <div className="buttons">
         <button
               className ="button"
               onClick={() => setShowEducation(true)}
@@ -28,6 +29,8 @@ function App() {
             >
               Experience
             </button>
+        </div>
+        
         <div>
         {showEducation ? (
           <Education education={education} />
@@ -47,12 +50,4 @@ function App() {
 
 export default App;
 
-// function App() {
-//   return (
-//     <div className="App">
-//       
-//     </div>
-//   );
-// }
-
-// export default App;
+//

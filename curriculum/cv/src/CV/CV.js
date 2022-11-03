@@ -1,25 +1,25 @@
 export const CV = {
     hero: {
-      name: "Anthony",
-      adress: "Edward Stark",
-      city: "Avengers Tower / New York",
-      email: "tony@starkindustries.com",
-      birthDate: "29/05/1970",
+      name: "Jose Manuel",
+      adress: "Garcia Garcia",
+      city: "Cañada rosal / Sevilla",
+      email: "ciruela88@hotmail.es",
+      birthDate: "28/01/1988",
       phone: "(+12) 767333841 NO PONGAIS EL VUESTRO POR FAVOR",
-      image: "https://i.imgur.com/ZQAkED3.png",
-      gitHub: "https://github.com/tonystark",
+      image: "https://pickaface.net/gallery/avatar/unr_rrrrrrrrrrr_200110_0243_2dn027l.png",
+      gitHub: "https://github.com/JoseManuel88",
       aboutMe: [
         {
-          info: "🤖 My armor, it was never a distraction or a hobby, it was a cocoon. I am Iron Man.",
+          info: "🤖 Me gusta la naturaleza,salir a pasear por la montaña ,hacer senderismo,descenso en bicicleta,todo lo que tenga que ver con el medio natural, me encantan los deportes de aventura y de riesgo enter ellos surf,skate,snow...",
         },
         {
-          info: "🔩 CEO of Stark Industries.",
+          info: "🔩 Me considero una persona introvertida, no me gusta la monotonia,simpre intento innovar y reciclarme dia a dia,soy trabajador y buen compañero.",
         },
         {
-          info: "🕶 Genius, billionaire, playboy, philanthropist.",
+          info: "🕶 Una de mis virtudes es que no le tengo miedo a avanzar,me encanta aprender dia a dia y superarme por duro que sea el reto.",
         },
         {
-          info: "🦾 I do have a responsibility to keep my inventions from evil hands – but I have a greater responsibility to oppose that evil any way I can.",
+          info: "🦾 Siempre me mantengo strong ante las adversidades,siempre intento sacar el 110% de mi por que se que puedo y creo en ello.",
         },
       ],
     },
